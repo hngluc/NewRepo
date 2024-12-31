@@ -31,6 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sắpXếpTheoSốCaNhiễmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cácĐịaPhươngNhómNguyCơToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xuấtBáoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDP = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -42,17 +45,14 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dvgCovid19 = new System.Windows.Forms.DataGridView();
-            this.sắpXếpTheoSốCaNhiễmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cácĐịaPhươngNhómNguyCơToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xuấtBáoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgvCovid19 = new System.Windows.Forms.DataGridView();
             this.MDP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENDP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CANHIEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TRANGTHAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgCovid19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCovid19)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -86,6 +86,28 @@
             this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
             this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
             this.chứcNăngToolStripMenuItem.Text = "Chức năng";
+            // 
+            // sắpXếpTheoSốCaNhiễmToolStripMenuItem
+            // 
+            this.sắpXếpTheoSốCaNhiễmToolStripMenuItem.Name = "sắpXếpTheoSốCaNhiễmToolStripMenuItem";
+            this.sắpXếpTheoSốCaNhiễmToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.sắpXếpTheoSốCaNhiễmToolStripMenuItem.Size = new System.Drawing.Size(319, 26);
+            this.sắpXếpTheoSốCaNhiễmToolStripMenuItem.Text = "Sắp xếp theo số ca nhiễm";
+            this.sắpXếpTheoSốCaNhiễmToolStripMenuItem.Click += new System.EventHandler(this.sắpXếpTheoSốCaNhiễmToolStripMenuItem_Click);
+            // 
+            // cácĐịaPhươngNhómNguyCơToolStripMenuItem
+            // 
+            this.cácĐịaPhươngNhómNguyCơToolStripMenuItem.Name = "cácĐịaPhươngNhómNguyCơToolStripMenuItem";
+            this.cácĐịaPhươngNhómNguyCơToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
+            this.cácĐịaPhươngNhómNguyCơToolStripMenuItem.Size = new System.Drawing.Size(319, 26);
+            this.cácĐịaPhươngNhómNguyCơToolStripMenuItem.Text = "Các địa phương nhóm nguy cơ";
+            // 
+            // xuấtBáoCáoToolStripMenuItem
+            // 
+            this.xuấtBáoCáoToolStripMenuItem.Name = "xuấtBáoCáoToolStripMenuItem";
+            this.xuấtBáoCáoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.xuấtBáoCáoToolStripMenuItem.Size = new System.Drawing.Size(319, 26);
+            this.xuấtBáoCáoToolStripMenuItem.Text = "Xuất báo cáo";
             // 
             // label2
             // 
@@ -160,6 +182,7 @@
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -189,43 +212,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin địa phương";
             // 
-            // dvgCovid19
+            // dgvCovid19
             // 
-            this.dvgCovid19.AllowUserToAddRows = false;
-            this.dvgCovid19.AllowUserToDeleteRows = false;
-            this.dvgCovid19.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgCovid19.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCovid19.AllowUserToAddRows = false;
+            this.dgvCovid19.AllowUserToDeleteRows = false;
+            this.dgvCovid19.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCovid19.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MDP,
             this.TENDP,
             this.CANHIEM,
             this.TRANGTHAI});
-            this.dvgCovid19.Location = new System.Drawing.Point(390, 122);
-            this.dvgCovid19.Name = "dvgCovid19";
-            this.dvgCovid19.ReadOnly = true;
-            this.dvgCovid19.RowHeadersWidth = 51;
-            this.dvgCovid19.Size = new System.Drawing.Size(594, 398);
-            this.dvgCovid19.TabIndex = 13;
-            // 
-            // sắpXếpTheoSốCaNhiễmToolStripMenuItem
-            // 
-            this.sắpXếpTheoSốCaNhiễmToolStripMenuItem.Name = "sắpXếpTheoSốCaNhiễmToolStripMenuItem";
-            this.sắpXếpTheoSốCaNhiễmToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.sắpXếpTheoSốCaNhiễmToolStripMenuItem.Size = new System.Drawing.Size(319, 26);
-            this.sắpXếpTheoSốCaNhiễmToolStripMenuItem.Text = "Sắp xếp theo số ca nhiễm";
-            // 
-            // cácĐịaPhươngNhómNguyCơToolStripMenuItem
-            // 
-            this.cácĐịaPhươngNhómNguyCơToolStripMenuItem.Name = "cácĐịaPhươngNhómNguyCơToolStripMenuItem";
-            this.cácĐịaPhươngNhómNguyCơToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.cácĐịaPhươngNhómNguyCơToolStripMenuItem.Size = new System.Drawing.Size(319, 26);
-            this.cácĐịaPhươngNhómNguyCơToolStripMenuItem.Text = "Các địa phương nhóm nguy cơ";
-            // 
-            // xuấtBáoCáoToolStripMenuItem
-            // 
-            this.xuấtBáoCáoToolStripMenuItem.Name = "xuấtBáoCáoToolStripMenuItem";
-            this.xuấtBáoCáoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.xuấtBáoCáoToolStripMenuItem.Size = new System.Drawing.Size(319, 26);
-            this.xuấtBáoCáoToolStripMenuItem.Text = "Xuất báo cáo";
+            this.dgvCovid19.Location = new System.Drawing.Point(390, 122);
+            this.dgvCovid19.Name = "dgvCovid19";
+            this.dgvCovid19.ReadOnly = true;
+            this.dgvCovid19.RowHeadersWidth = 51;
+            this.dgvCovid19.Size = new System.Drawing.Size(647, 398);
+            this.dgvCovid19.TabIndex = 13;
             // 
             // MDP
             // 
@@ -264,18 +266,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 556);
-            this.Controls.Add(this.dvgCovid19);
+            this.Controls.Add(this.dgvCovid19);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Thông tin địa phương";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgCovid19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCovid19)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,7 +300,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dvgCovid19;
+        private System.Windows.Forms.DataGridView dgvCovid19;
         private System.Windows.Forms.ToolStripMenuItem sắpXếpTheoSốCaNhiễmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cácĐịaPhươngNhómNguyCơToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xuấtBáoCáoToolStripMenuItem;

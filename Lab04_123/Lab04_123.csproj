@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{76D826C5-5A4F-406A-B6C9-11EDDB13C064}</ProjectGuid>
+    <ProjectGuid>{4454B590-8C71-4049-8CCD-6531235C2A86}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ASM1</RootNamespace>
-    <AssemblyName>ASM1</AssemblyName>
+    <RootNamespace>Lab04_123</RootNamespace>
+    <AssemblyName>Lab04_123</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -61,22 +61,32 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="frmFaculty.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="frmFaculty.Designer.cs">
+      <DependentUpon>frmFaculty.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\DiaPhuong.cs" />
-    <Compile Include="Models\Model1.cs" />
-    <Compile Include="Models\TrangThai.cs" />
+    <Compile Include="frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearch.Designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Faculty.cs" />
+    <Compile Include="Model\Student.cs" />
+    <Compile Include="Model\StudentContextDB.cs" />
+    <Compile Include="Model\ViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="frmFaculty.resx">
+      <DependentUpon>frmFaculty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
