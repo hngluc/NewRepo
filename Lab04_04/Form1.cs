@@ -15,7 +15,7 @@ namespace lab04_04
     public partial class OrderForm : Form
     {
         private ProductOrderContext context;
-        public OrderForm()
+        public OrderForm()  
         {
             InitializeComponent();
             context = new ProductOrderContext();
